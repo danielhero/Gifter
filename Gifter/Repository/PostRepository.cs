@@ -18,12 +18,14 @@ namespace Gifter.Repositories
         public List<Post> GetAll()
         {
             return _context.Post.Include(p => p.UserProfile)
+                                .Include(p => p.Comments)
                                 .ToList();
         }
 
         public Post GetById(int id)
         {
             return _context.Post.Include(p => p.UserProfile)
+                                .Include(p => p.Comments)
                                 .FirstOrDefault(p => p.Id == id);
         }
 

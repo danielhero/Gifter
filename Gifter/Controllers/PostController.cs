@@ -2,6 +2,7 @@
 using Gifter.Data;
 using Gifter.Repositories;
 using Gifter.Models;
+using System;
 
 namespace Gifter.Controllers
 {
@@ -43,6 +44,13 @@ namespace Gifter.Controllers
         public IActionResult Search(string q, bool sortDesc)
         {
             return Ok(_postRepository.Search(q, sortDesc));
+        }
+
+        //https://localhost:5001/api/post/hottest?since=(date)
+        [HttpGet("hottest")]
+        public IActionResult Hottest(DateTime since)
+        {
+            return Ok(_postRepository.Hottest(since));
         }
 
         [HttpPost]

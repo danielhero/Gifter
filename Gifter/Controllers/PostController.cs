@@ -38,6 +38,13 @@ namespace Gifter.Controllers
             return Ok(_postRepository.GetByUserProfileId(id));
         }
 
+        //https://localhost:5001/api/post/search?q=p&sortDesc=false
+        [HttpGet("search")]
+        public IActionResult Search(string q, bool sortDesc)
+        {
+            return Ok(_postRepository.Search(q, sortDesc));
+        }
+
         [HttpPost]
         public IActionResult Post(Post post)
         {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardImg, CardBody } from "reactstrap";
 
+
 const Post = ({ post }) => {
     return (
         <Card className="m-4">

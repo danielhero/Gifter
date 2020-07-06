@@ -1,5 +1,6 @@
 import { PostContext } from "../providers/PostProvider";
 import React, { useContext, useRef } from "react";
+import { useHistory } from "react-router-dom";
 
 export default (props) => {
     const { addPost } = useContext(PostContext)
@@ -8,6 +9,7 @@ export default (props) => {
     const imageUrl = useRef();
     const caption = useRef();
     const userProfileId = useRef();
+    const history = useHistory();
 
     const constructNewPost = () => {
 
@@ -18,7 +20,10 @@ export default (props) => {
             userProfileId: userProfileId.current.value,
             dateCreated: new Date(),
         }
-        addPost(newPostObject)
+        addPost(newPostObject).then((p) => {
+            // Navigate the user back to the home route
+            history.push("/");
+        });
     };
 
     return (

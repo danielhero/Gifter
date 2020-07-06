@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel\\workspace\\Gifter\\Gifter\\Gifter.csproj": {}
+    "C:\\Users\\Daniel\\workspace\\gifter\\Gifter\\Gifter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel\\workspace\\Gifter\\Gifter\\Gifter.csproj": {
+    "C:\\Users\\Daniel\\workspace\\gifter\\Gifter\\Gifter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\workspace\\Gifter\\Gifter\\Gifter.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel\\workspace\\gifter\\Gifter\\Gifter.csproj",
         "projectName": "Gifter",
-        "projectPath": "C:\\Users\\Daniel\\workspace\\Gifter\\Gifter\\Gifter.csproj",
+        "projectPath": "C:\\Users\\Daniel\\workspace\\gifter\\Gifter\\Gifter.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\workspace\\Gifter\\Gifter\\obj\\",
+        "outputPath": "C:\\Users\\Daniel\\workspace\\gifter\\Gifter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",

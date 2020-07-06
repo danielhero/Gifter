@@ -27,7 +27,7 @@ const PostList = () => {
                     ref={search}
                     className="inputSearch"
                     onKeyUp={e => setSearchTerm(search.current.value)}
-                    name="userSearch"
+                    name="PostSearch"
                     placeholder="Search Posts"
                 />
             </div>

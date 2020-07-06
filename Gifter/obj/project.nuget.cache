@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XEImf4uGRXgVXzmbAilg4unPgF63Edg/Q4IU+tnggShKgrN+1d6ASnbWo0kAc26tziyar/QcBFgbDE0TQCVgYw==",
+  "dgSpecHash": "n5WsXrvRPCFwF7z+b5apIcUowvSclH+kzJISQ12uS6jAARPIbRRWuPaj/IEleNcfFUANrLgBtALrfayVsXEUCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\workspace\\Gifter\\Gifter\\Gifter.csproj",
+  "projectFilePath": "C:\\Users\\Daniel\\workspace\\gifter\\Gifter\\Gifter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.5\\microsoft.aspnetcore.jsonpatch.3.1.5.nupkg.sha512",

@@ -7,29 +7,37 @@ export const PostProvider = (props) => {
     const [searchTerm, setSearchTerm] = useState("")
 
     const getAllPosts = () => {
-        return fetch("api/post")
+        return fetch("/api/post")
             .then((res) => res.json())
             .then(setPosts);
     };
 
+    const getPost = (id) => {
+        return fetch(`/api/post/${id}`)
+            .then((res) => res.json())
+    };
+
     const addPost = (post) => {
-        return fetch("api/post", {
+        return fetch("/api/post", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(post),
-        }).then(getAllPosts);
+        })
     };
 
     const searchPosts = (searchTerm) => {
-        return fetch(`api/post/search?q=${searchTerm}`)
+        return fetch(`/api/post/search?q=${searchTerm}`)
             .then((res) => res.json())
             .then(setPosts);
     };
 
     return (
-        <PostContext.Provider value={{ posts, getAllPosts, addPost, setPosts, searchPosts, searchTerm, setSearchTerm }}>
+        <PostContext.Provider value={{
+            posts, getAllPosts, getPost, addPost,
+            setPosts, searchPosts, searchTerm, setSearchTerm
+        }}>
             {props.children}
         </PostContext.Provider>
     );

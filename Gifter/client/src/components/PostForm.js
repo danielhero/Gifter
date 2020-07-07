@@ -1,9 +1,10 @@
 import { PostContext } from "../providers/PostProvider";
 import React, { useContext, useRef } from "react";
 import { useHistory } from "react-router-dom";
+import { Card } from "reactstrap";
 
 export default (props) => {
-    const { addPost } = useContext(PostContext)
+    const { addPost, getAllPosts } = useContext(PostContext)
 
     const title = useRef();
     const imageUrl = useRef();
@@ -20,79 +21,82 @@ export default (props) => {
             userProfileId: userProfileId.current.value,
             dateCreated: new Date(),
         }
-        addPost(newPostObject).then((p) => {
-            // Navigate the user back to the home route
-            history.push("/");
-        });
+        addPost(newPostObject).then(getAllPosts)
+            .then((p) => {
+                // Navigate the user back to the home route
+                history.push("/");
+            });
     };
 
     return (
-        <form className="postForm">
-            <h3 className="postForm__title">New Post</h3>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="postTitle">Title: </label>
-                    <input
-                        type="text"
-                        id="postTitle"
-                        ref={title}
-                        required
-                        autoFocus
-                        className="form-control"
-                        placeholder="Post Title"
-                    />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="postImage">ImageURL: </label>
-                    <input
-                        type="url"
-                        id="postImage"
-                        ref={imageUrl}
-                        required
-                        autoFocus
-                        className="form-control"
-                        placeholder="Post GIF"
-                    />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="postCaption">Caption </label>
-                    <input
-                        type="text"
-                        id="postCaption"
-                        ref={caption}
-                        autoFocus
-                        className="form-control"
-                        placeholder="Post Caption"
-                    />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="postUserId">UserId </label>
-                    <input
-                        type="number"
-                        id="postuserId"
-                        ref={userProfileId}
-                        autoFocus
-                        className="form-control"
-                        placeholder="Post UserId"
-                    />
-                </div>
-            </fieldset>
-            <button
-                type="submit"
-                onClick={(evt) => {
-                    evt.preventDefault(); // Prevent browser from submitting the form
-                    constructNewPost();
-                }}
-                className="btn btn-primary"
-            >
-                Save Post
+        <Card>
+            <form className="postForm">
+                <h3 className="postForm__title">New Post</h3>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="postTitle">Title: </label>
+                        <input
+                            type="text"
+                            id="postTitle"
+                            ref={title}
+                            required
+                            autoFocus
+                            className="form-control"
+                            placeholder="Post Title"
+                        />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="postImage">ImageURL: </label>
+                        <input
+                            type="url"
+                            id="postImage"
+                            ref={imageUrl}
+                            required
+                            autoFocus
+                            className="form-control"
+                            placeholder="Post GIF"
+                        />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="postCaption">Caption: </label>
+                        <input
+                            type="text"
+                            id="postCaption"
+                            ref={caption}
+                            autoFocus
+                            className="form-control"
+                            placeholder="Post Caption"
+                        />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="postUserId">UserId: </label>
+                        <input
+                            type="number"
+                            id="postuserId"
+                            ref={userProfileId}
+                            autoFocus
+                            className="form-control"
+                            placeholder="Post UserId"
+                        />
+                    </div>
+                </fieldset>
+                <button
+                    type="submit"
+                    onClick={(evt) => {
+                        evt.preventDefault(); // Prevent browser from submitting the form
+                        constructNewPost();
+                    }}
+                    className="btn btn-primary"
+                >
+                    Save Post
           </button>
-        </form>
+            </form>
+        </Card>
     );
 }

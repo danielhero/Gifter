@@ -18,6 +18,9 @@ const ApplicationViews = () => {
             <Route path="/posts/:id">
                 <PostDetails />
             </Route>
+
+            <Route path="/users/:id">
+            </Route>
         </Switch>
     );
 };

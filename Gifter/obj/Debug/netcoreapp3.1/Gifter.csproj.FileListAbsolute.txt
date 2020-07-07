@@ -140,8 +140,6 @@ C:\Users\Daniel\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\runtimes\win\lib
 C:\Users\Daniel\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csprojAssemblyReference.cache
 C:\Users\Daniel\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.AssemblyInfoInputs.cache
 C:\Users\Daniel\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.AssemblyInfo.cs
-C:\Users\Daniel\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csproj.CoreCompileInputs.cache
-C:\Users\Daniel\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Daniel\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.RazorTargetAssemblyInfo.cache
 C:\Users\Daniel\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csproj.CopyComplete
 C:\Users\Daniel\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\staticwebassets\Gifter.StaticWebAssets.Manifest.cache

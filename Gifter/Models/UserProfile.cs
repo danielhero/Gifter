@@ -19,7 +19,6 @@ namespace Gifter.Models
 
         public string ImageUrl { get; set; }
 
-        [Required]
         public DateTime DateCreated { get; set; }
 
     }

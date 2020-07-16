@@ -32,7 +32,7 @@ const PostDetails = () => {
                 </div>
             </div>
         </div>
-    );
+    ); q
 };
 
 export default PostDetails;

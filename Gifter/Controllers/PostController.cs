@@ -16,7 +16,7 @@ namespace Gifter.Controllers
             _postRepository = new PostRepository(context);
         }
 
-        [HttpGet]
+        [HttpGet("posts")]
         public IActionResult Get()
         {
             return Ok(_postRepository.GetAll());
